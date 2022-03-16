@@ -2,85 +2,71 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet" />
     <title>Booki</title>
 </head>
 
 <body>
-    <header>
-        <div id="head_top">
-            <a href="index.html" id="logo">
-                <img src="assets/logo/Booki@3x.png" alt="Booki">
+    <header class="flex_around">
+        <a href="index.html" id="logo" class="flex_around">
+            <img src="assets/logo/Booki@3x.png" alt="Booki" />
+        </a>
+        <nav id="menu" class="flex_around">
+            <a href="#hebergements" class="choix flex_around">
+                <div class="navlink flex_around">Hébergement</div>
             </a>
-            <nav id="menu">
-                <a href=#hebergements class="choix">
-                    <div class="navlink">  
-                        Hébergement
-                    </div>
-                </a>
-                <a href=#activites class="choix">  
-                    <div class="navlink">
-                        Activités
-                    </div>
-                </a>
-            </nav>
-        </div>
-        <div id="accroche">
-            <strong>Trouvez votre hébergement pour des vacances de rêve</strong><br />
-            En plein centre ville ou en pleine nature
-        </div>
-        <form id="recherche">
-                <div id = "icon">
-                    <i class="fas fa-map-marker-alt"></i>
-                </div>
-                <input type="text" name="ville" placeholder="Marseille, France" id="searchbar"/>
-                <input type="submit" value="Rechercher" id="searchbutton"/>
-        </form>
-        <div id="listefiltre">
-                <div id="texte">
-                    Filtres
-                </div>
-                <div class="filtre">
-                    <div class="filtreimage">
-                        <i class="fas fa-money-bill-wave"></i>
-                    </div>
-                    Économique
-                </div>
-                <div class="filtre">
-                    <div class="filtreimage">
-                        <i class="fas fa-child"></i>
-                    </div>
-                    Familial
-                </div>
-                <div class="filtre">
-                    <div class="filtreimage">
-                        <i class="far fa-heart"></i>
-                    </div>
-                    Romantique
-                </div>
-                <div class="filtre">
-                    <div class="filtreimage">
-                        <i class="fas fa-dog"></i>
-                    </div>
-                    Animaux Autorisés
-                </div>
-        </div>
-        <div id="renseignement">
-            <div id="info">
-                <i class="fas fa-info"></i>
-            </div>
-            <div>
-                Plus de 500 logements sont disponibles dans cette ville
-            </div>
-        </div>
-
-
+            <a href="#activites" class="choix flex_around">
+                <div class="navlink flex_around">Activités</div>
+            </a>
+        </nav>
     </header>
-
+    <div id="accroche">
+        <strong>Trouvez votre hébergement pour des vacances de rêve</strong><br /> En plein centre ville ou en pleine nature
+    </div>
+    <form id="recherche">
+        <div id="icon" class="flex_around">
+            <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <input type="text" name="ville" placeholder="Marseille, France" id="searchbar" />
+        <input type="submit" value="Rechercher" id="searchbutton" />
+    </form>
+    <div id="liste_filtre" class="flex_around">
+        <div id="texte">Filtres</div>
+        <div class="filtre flex_around">
+            <div class="filtre_image flex_around">
+                <i class="fas fa-money-bill-wave"></i>
+            </div>
+            Économique
+        </div>
+        <div class="filtre flex_around">
+            <div class="filtre_image flex_around">
+                <i class="fas fa-child"></i>
+            </div>
+            Familial
+        </div>
+        <div class="filtre flex_around">
+            <div class="filtre_image flex_around">
+                <i class="far fa-heart"></i>
+            </div>
+            Romantique
+        </div>
+        <div class="filtre flex_around">
+            <div class="filtre_image flex_around">
+                <i class="fas fa-dog"></i>
+            </div>
+            Animaux Autorisés
+        </div>
+    </div>
+    <div id="renseignement" class="flex_around">
+        <div id="info" class="flex_around">
+            <i class="fas fa-info"></i>
+        </div>
+        <div>Plus de 500 logements sont disponibles dans cette ville</div>
+    </div>
 </body>
 
 </html>
