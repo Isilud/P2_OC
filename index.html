@@ -1,72 +1,190 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+      rel="stylesheet"
+    />
     <title>Booki</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="flex_around">
-        <a href="index.html" id="logo" class="flex_around">
-            <img src="assets/logo/Booki@3x.png" alt="Booki" />
+      <a href="index.html" id="logo" class="flex_around">
+        <img src="assets/logo/Booki@3x.png" alt="Booki" />
+      </a>
+      <nav id="menu" class="flex_around">
+        <a href="#hebergements" class="choix flex_around">
+          <div class="navlink flex_around">Hébergement</div>
         </a>
-        <nav id="menu" class="flex_around">
-            <a href="#hebergements" class="choix flex_around">
-                <div class="navlink flex_around">Hébergement</div>
-            </a>
-            <a href="#activites" class="choix flex_around">
-                <div class="navlink flex_around">Activités</div>
-            </a>
-        </nav>
+        <a href="#activites" class="choix flex_around">
+          <div class="navlink flex_around">Activités</div>
+        </a>
+      </nav>
     </header>
-    <div id="accroche">
-        <strong>Trouvez votre hébergement pour des vacances de rêve</strong><br /> En plein centre ville ou en pleine nature
-    </div>
-    <form id="recherche">
-        <div id="icon" class="flex_around">
-            <i class="fas fa-map-marker-alt"></i>
+    <main>
+      <section id="above">
+        <div id="accroche">
+          <strong>Trouvez votre hébergement pour des vacances de rêve</strong
+          ><br />
+          En plein centre ville ou en pleine nature
         </div>
-        <input type="text" name="ville" placeholder="Marseille, France" id="searchbar" />
-        <input type="submit" value="Rechercher" id="searchbutton" />
-    </form>
-    <div id="liste_filtre" class="flex_around">
-        <div id="texte">Filtres</div>
-        <div class="filtre flex_around">
+        <form id="recherche">
+          <div id="icon" class="flex_around">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <input
+            type="text"
+            name="ville"
+            placeholder="Marseille, France"
+            id="searchbar"
+          />
+          <input type="submit" value="Rechercher" id="searchbutton" />
+        </form>
+        <div id="liste_filtre" class="flex_around">
+          <div id="texte">Filtres</div>
+          <div class="filtre flex_around">
             <div class="filtre_image flex_around">
-                <i class="fas fa-money-bill-wave"></i>
+              <i class="fas fa-money-bill-wave"></i>
             </div>
             Économique
-        </div>
-        <div class="filtre flex_around">
+          </div>
+          <div class="filtre flex_around">
             <div class="filtre_image flex_around">
-                <i class="fas fa-child"></i>
+              <i class="fas fa-child"></i>
             </div>
             Familial
-        </div>
-        <div class="filtre flex_around">
+          </div>
+          <div class="filtre flex_around">
             <div class="filtre_image flex_around">
-                <i class="far fa-heart"></i>
+              <i class="far fa-heart"></i>
             </div>
             Romantique
-        </div>
-        <div class="filtre flex_around">
+          </div>
+          <div class="filtre flex_around">
             <div class="filtre_image flex_around">
-                <i class="fas fa-dog"></i>
+              <i class="fas fa-dog"></i>
             </div>
             Animaux Autorisés
+          </div>
         </div>
-    </div>
-    <div id="renseignement" class="flex_around">
-        <div id="info" class="flex_around">
+        <div id="renseignement" class="flex_around">
+          <div id="info" class="flex_around">
             <i class="fas fa-info"></i>
+          </div>
+          <div>Plus de 500 logements sont disponibles dans cette ville</div>
         </div>
-        <div>Plus de 500 logements sont disponibles dans cette ville</div>
-    </div>
-</body>
-
+      </section>
+      <section id="hebergements" class="flex_around">
+          <article class="background"> 
+              <h3>Hébergements à Marseille</h3>
+              <div id="liste_hebergement" class="flex_around">
+                  <a class="template_hebergement" href=”#” >
+                    <figure>
+                        <img src="assets/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg">
+                        <figcaption class="data_hebergement">
+                            <span><strong>Auberge La Cannebière</strong></span>
+                            <span>Nuit à partir de <strong>25 E</strong></span>
+                            <span>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star grey"></i>
+                            </span>
+                        </figcaption>
+                    </figure>
+                  </a>
+                  <a class="template_hebergement" href=”#” >
+                    <figure>
+                          <img src="assets/hebergements/3_medium/fred-kleber-gTbaxaVLvsg-unsplash.jpg">
+                        <figcaption class="data_hebergement">
+                            <span><strong>Hôtel du port</strong></span>
+                            <span>Nuit à partir de <strong>52 E</strong></span>
+                            <span>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </span>
+                        </figcaption>
+                    </figure>
+                  </a>
+                  <a class="template_hebergement" href=”#” >
+                    <figure>
+                          <img src="assets/hebergements/3_medium/reisetopia-B8WIgxA_PFU-unsplash.jpg">
+                        <figcaption class="data_hebergement">
+                            <span><strong>Hôtel les mouettes</strong></span>
+                            <span>Nuit à partir de <strong>76 E</strong></span>
+                            <span>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star grey"></i>
+                            </span>
+                        </figcaption>
+                    </figure>
+                  </a>
+                  <a class="template_hebergement" href=”#” >
+                    <figure>
+                          <img src="assets/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg">
+                        <figcaption class="data_hebergement">
+                            <span><strong>Hôtel de la mer</strong></span>
+                            <span>Nuit à partir de <strong>46 E</strong></span>
+                            <span>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star grey"></i>
+                                <i class="fas fa-star grey"></i>
+                            </span>
+                        </figcaption>
+                    </figure>
+                  </a>
+                  <a class="template_hebergement" href=”#” >
+                    <figure>
+                          <img src="assets/hebergements/3_medium/nicate-lee-kT-ZyaiwBe0-unsplash.jpg">
+                        <figcaption class="data_hebergement">
+                            <span><strong>Auberge Le Panier</strong></span>
+                            <span>Nuit à partir de <strong>23 E</strong></span>
+                            <span>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star grey"></i>
+                            </span>
+                        </figcaption>
+                    </figure>
+                  </a>
+                  <a class="template_hebergement" href=”#” >
+                    <figure>
+                          <img src="assets/hebergements/3_medium/febrian-zakaria-M6S1WvfW68A-unsplash.jpg">
+                        <figcaption class="data_hebergement">
+                            <span><strong>Hôtel chez Amina</strong></span>
+                            <span>Nuit à partir de <strong>96 E</strong></span>
+                            <span>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </span>
+                        </figcaption>
+                    </figure>
+                  </a>
+              </div>
+              <span><strong>Afficher plus</span>
+          </article>
+          <aside class="background">test</aside>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
 </html>

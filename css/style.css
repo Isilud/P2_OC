@@ -27,6 +27,18 @@ body {
     max-width: 1300px;
 }
 
+figure {
+    display: block;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+main > * {
+    margin-bottom: 20px;
+}
+
 header {
     height: 130px;
 }
@@ -67,11 +79,12 @@ nav {
 
 #recherche {
     justify-content: left;
-    display: inline-flex;
+    display: flex;
     border: 0px;
     border-radius: 15px;
     overflow: hidden;
     margin-left: 0px;
+    width: 600px;
 }
 
 #icon {
@@ -82,7 +95,8 @@ nav {
 
 #searchbar {
     border: 1px var(--background-color) solid;
-    width: 250px;
+    flex-grow: 1;
+    min-width: 250px;
 }
 
 ::placeholder {
@@ -103,7 +117,8 @@ nav {
     justify-content: left;
     flex-wrap: wrap;
     margin: 20px 0px;
-    gap: 30px;
+    column-gap: 30px;
+    row-gap: 10px;
 }
 
 .filtre {
@@ -132,9 +147,79 @@ nav {
 #info {
     height: 30px;
     width: 30px;
+    min-width: 30px;
     border: 2px var(--background-color) solid;
     border-radius: 20px;
     color: var(--main-color);
+}
+
+.background {
+    background-color: var(--background-color);
+    border-radius: 20px;
+    overflow: hidden;
+    height: 100%;
+    padding: 20px;
+}
+
+#hebergements{
+    justify-content: space-between;
+    height: fit-content;
+}
+
+#hebergements article {
+    width: 65%;
+
+}
+
+#liste_hebergement {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap : 20px;
+    padding-bottom: 20px;
+}
+
+#hebergements aside {
+    width: 33%;
+}
+
+.template_hebergement {
+    height: 200px;
+    width: 230px;
+}
+
+.template_hebergement figure {
+    position: absolute;
+    overflow: hidden;
+    height: 195px;
+    border: 5px white solid;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px black;
+}
+
+.template_hebergement figure img {
+    width: 220px;
+}
+
+.data_hebergement {
+    position: absolute;
+    height: 40%;
+    width: 230px;
+    bottom: 0px;
+    padding-left: 10px ;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: black;
+}
+
+.fa-star {
+    color: var(--main-color);
+}
+
+.grey {
+    color: var(--background-color);
 }
 
 @media all and (max-width: 992px)
@@ -145,22 +230,50 @@ nav {
         margin: auto;
         width: auto;
     }
+
+    header {
+        padding-bottom: 20px;
+    }
+
     #logo {
         flex-grow: 2;
     }
+
     nav {
         font-size: 20px;
         flex-grow: 1;
         flex-direction: column;
     }
+
     .choix {
         height: 49%;
     }
+
     .choix:hover {
         border: none;
         border-right: 2px var(--main-color) solid;
         border-left: 2px var(--main-color) solid;
     }
+
+    #accroche {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    #recherche {
+        border: 1px solid;
+        width: 60%;
+        margin: auto;
+    }
+    #hebergements {
+        flex-direction: column;
+    }
+
+    #hebergements article {
+        text-align: center;
+        width: 100%;
+    }
+
 }
 
 @media all and (max-width: 768px)
@@ -191,5 +304,64 @@ nav {
     .choix:hover {
         border: none;
         border-bottom: 5px var(--main-color) solid;
+    }
+
+    main {
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 25px;
+    }
+    #accroche {
+        text-align: left;
+    }
+
+    #accroche strong{
+        font-size: 30px;
+    }
+
+    #recherche {
+        width: 80%;
+    }
+
+    #texte {
+        width: 100%;
+    }
+
+    #info {
+        margin-right: 15px;
+    }
+
+    #hebergements {
+        flex-direction: column-reverse;
+    }
+
+    #hebergements article {
+        background-color: white;
+        text-align: left;
+    }
+
+    #liste_hebergement {
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    .template_hebergement {
+        width: 90%;
+        height: 350px;
+    }
+
+    .template_hebergement figure{
+        width: 80%;
+        height: inherit;
+    }
+
+    .template_hebergement figure img{
+        position: relative;
+        top: -15%;
+        width: 100%;
+    }
+
+    .data_hebergement {
+        width: 100%;
     }
 }
