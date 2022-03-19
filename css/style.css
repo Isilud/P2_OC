@@ -11,9 +11,9 @@
     box-sizing: border-box;
 }
 
-.flex_around {
+.flex_center {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
@@ -23,8 +23,7 @@
 
 body {
     margin: auto;
-    width: auto;
-    max-width: 1300px;
+    width: 1300px;
 }
 
 figure {
@@ -164,11 +163,12 @@ nav {
 #hebergements{
     justify-content: space-between;
     height: fit-content;
+    width: inherit;
 }
 
 #hebergements article {
+    height:100%;
     width: 65%;
-
 }
 
 #liste_hebergement {
@@ -178,39 +178,38 @@ nav {
     padding-bottom: 20px;
 }
 
-#hebergements aside {
-    width: 33%;
-}
-
 .template_hebergement {
     height: 200px;
     width: 230px;
-}
-
-.template_hebergement figure {
-    position: absolute;
-    overflow: hidden;
-    height: 195px;
     border: 5px white solid;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 2px 2px 5px black;
 }
 
-.template_hebergement figure img {
-    width: 220px;
+.template_hebergement picture{
+    overflow: hidden;
+}
+
+#liste_hebergement .template_hebergement picture{
+    width: 100%;
+    height: 60%;
+}
+
+.template_hebergement img{
+    max-width: 300%;
+    max-height: 300%;
 }
 
 .data_hebergement {
-    position: absolute;
+    width: inherit;
     height: 40%;
-    width: 230px;
-    bottom: 0px;
-    padding-left: 10px ;
+    padding: 10px ;
     background-color: white;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
+    text-align: left;
     color: black;
 }
 
@@ -222,13 +221,47 @@ nav {
     color: var(--background-color);
 }
 
+aside {
+    float: right;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-around;
+    gap : 15px;
+}
+
+aside > span {
+    width: 100%;
+}
+
+aside h3{
+    flex-grow: 1;
+}
+
+aside .template_hebergement{
+    height: 140px;
+    width: 370px;
+    display: flex;
+}
+
+aside .data_hebergement{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+aside .template_hebergement picture{
+    height: 100%;
+    width: 100%;
+}
+
+
 @media all and (max-width: 992px)
 /* Écran de tablette */
 
 {
     body {
         margin: auto;
-        width: auto;
+        width: 991px;
     }
 
     header {
@@ -274,6 +307,26 @@ nav {
         width: 100%;
     }
 
+    #top_hebergements {
+        background-color: white;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        column-gap: 30px;
+    }
+
+    #top_hebergements > span {
+        gap: 20px;
+        width: 100%;
+    }
+
+    #top_hebergements h3 {
+        flex-grow: 0;
+    }
+
+    #top_hebergements .template_hebergement {
+        width: 290px;
+    }
 }
 
 @media all and (max-width: 768px)
@@ -288,13 +341,20 @@ nav {
     header {
         flex-direction: column;
         height: auto;
+        align-items: center;
+        justify-content: center;
+    }
+    header img {
+        position: relative;
+        left: 25px;
+        padding: 30px;
     }
     #menu {
         width: 100%;
     }
     nav {
         flex-direction: row;
-        font-size: 35px;
+        font-size: 20px;
     }
     .choix {
         width: 50%;
@@ -307,10 +367,14 @@ nav {
     }
 
     main {
-        margin-left: 20px;
-        margin-right: 20px;
-        font-size: 25px;
+        width: inherit;
+        font-size: 15px;
     }
+
+    #above {
+        padding: 20px 30px;
+    }
+
     #accroche {
         text-align: left;
     }
@@ -338,6 +402,7 @@ nav {
     #hebergements article {
         background-color: white;
         text-align: left;
+        padding: 20px 30px;
     }
 
     #liste_hebergement {
@@ -345,23 +410,39 @@ nav {
         flex-direction: column;
     }
 
-    .template_hebergement {
-        width: 90%;
-        height: 350px;
+    .template_hebergement{
+        width: 100%;
+        height: 250px;
     }
 
-    .template_hebergement figure{
-        width: 80%;
-        height: inherit;
+    .template_hebergement img {
+        max-width: 150%;
+        max-height: none;
     }
 
-    .template_hebergement figure img{
-        position: relative;
-        top: -15%;
+    #top_hebergements {
+        background-color: var(--background-color);
+        flex-direction: column;
+        border-radius: 0px;
+        width: 100%;
+        padding: 20px 30px;
+    }
+
+    #top_hebergements span h3{
+        flex-grow: 1;
+    }
+
+    #top_hebergements a{
         width: 100%;
     }
 
-    .data_hebergement {
+    #top_hebergements .template_hebergement{
+        width: 100%;
+        height: 180px;
+    }
+
+    #top_hebergements .template_hebergement img{
         width: 100%;
     }
+
 }
