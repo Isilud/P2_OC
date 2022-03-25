@@ -42,6 +42,10 @@ header {
     height: 130px;
 }
 
+a {
+    text-decoration: none;
+}
+
 #logo {
     justify-content: left;
     flex-grow: 3;
