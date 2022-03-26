@@ -569,8 +569,9 @@ footer .cflex {
 
   footer.rflex{
     flex-direction: column;
+    padding-top: 20px;
   }
-  footer cflex{
-    padding: 10px;
+  footer .cflex{
+    padding: 20px 30px;
   }
 }
