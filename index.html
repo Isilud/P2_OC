@@ -43,7 +43,12 @@
             <i class="fas fa-map-marker-alt"></i>
           </div>
           <input type="text" name="ville" placeholder="Marseille, France" />
-          <button type="submit" class="center">Rechercher</button>
+          <button type="submit" class="center">
+            <span id="search_text">Rechercher</span>
+            <div id="search_image" class="center">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+          </button>
         </form>
         <div id="liste_filtre" class="rflex center">
           <div id="texte">Filtres</div>
@@ -106,7 +111,7 @@
                 <figcaption class="cflex">
                   <span><strong>Auberge La Cannebière</strong></span>
                   <span>Nuit à partir de <strong>25 €</strong></span>
-                  <span>
+                  <span class="note">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -139,7 +144,7 @@
                 <figcaption class="cflex">
                   <span><strong>Hôtel du port</strong></span>
                   <span>Nuit à partir de <strong>52 €</strong></span>
-                  <span>
+                  <span class="note">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -172,7 +177,7 @@
                 <figcaption class="cflex">
                   <span><strong>Hôtel les mouettes</strong></span>
                   <span>Nuit à partir de <strong>76 €</strong></span>
-                  <span>
+                  <span class="note">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -205,7 +210,7 @@
                 <figcaption class="cflex">
                   <span><strong>Hôtel de la mer</strong></span>
                   <span>Nuit à partir de <strong>46 €</strong></span>
-                  <span>
+                  <span class="note">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -238,7 +243,7 @@
                 <figcaption class="cflex">
                   <span><strong>Auberge Le Panier</strong></span>
                   <span>Nuit à partir de <strong>23 €</strong></span>
-                  <span>
+                  <span class="note">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -271,7 +276,7 @@
                 <figcaption class="cflex">
                   <span><strong>Hôtel chez Amina</strong></span>
                   <span>Nuit à partir de <strong>96 €</strong></span>
-                  <span>
+                  <span class="note">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -311,8 +316,8 @@
               </picture>
               <figcaption class="cflex">
                 <span><strong>Hôtel Le soleil du matin</strong></span>
-                <span>Nuit à partir de <strong>128 €</strong></span>
-                <span>
+                <span class="set_note">Nuit à partir de <strong>128 €</strong></span>
+                <span class="note">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
@@ -345,8 +350,8 @@
               <figcaption class="cflex">
                 <span><strong>Au coeur de l'eau</strong></span>
                 <span><strong>Chambre d'hôtes</strong></span>
-                <span>Nuit à partir de <strong>71 €</strong></span>
-                <span>
+                <span class="set_note">Nuit à partir de <strong>71 €</strong></span>
+                <span class="note">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
@@ -378,8 +383,8 @@
               </picture>
               <figcaption class="cflex">
                 <span><strong>Hôtel Tout bleu et blanc</strong></span>
-                <span>Nuit à partir de <strong>68 €</strong></span>
-                <span>
+                <span class="set_note">Nuit à partir de <strong>68 €</strong></span>
+                <span class="note">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
@@ -393,8 +398,7 @@
       </section>
       <section id="activites" class="cflex">
         <span><h3>Activités à Marseille</h3></span>
-        <div id="activites_liste" class="rflex">
-          
+        <div id="activites_liste" class="cflex">
           <a href="#">
             <figure class="vcard round_border cflex">
               <picture class="center">
@@ -420,7 +424,7 @@
             </figcaption>
           </figure>
           </a>
-          <div class="half_show cflex">
+          <!-- <div class="half_show cflex"> -->
             <a href="#">
               <figure class="vcard round_border cflex">
                 <picture class="center">
@@ -471,7 +475,7 @@
               </figcaption>
             </figure>
             </a>
-          </div>
+          <!-- </div> -->
           <a href="#">
             <figure class="vcard round_border cflex">
               <picture class="center">
@@ -497,7 +501,7 @@
             </figcaption>
           </figure>
           </a>
-          <div class="half_show cflex">
+          <!-- <div class="half_show cflex"> -->
             <a href="#">
               <figure class="vcard round_border cflex">
                 <picture class="center">
@@ -548,7 +552,7 @@
               </figcaption>
             </figure>
             </a>
-          </div>
+          <!-- </div> -->
         </div>
       </section>
     </main>
