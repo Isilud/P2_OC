@@ -140,6 +140,7 @@ figure {
   border: 5px white solid;
   height: 150px;
   width: 100%;
+  box-shadow: 2px 2px 5px var(--background-color);
 }
 
 .hcard picture {
@@ -224,9 +225,11 @@ figure {
 #liste_filtre {
   justify-content: flex-start;
   column-gap: 25px;
+  row-gap: 15px;
   margin-bottom: 40px;
   font-weight: bolder;
   font-size: 18px;
+  flex-wrap: wrap;
 }
 
 #info {
@@ -351,7 +354,223 @@ footer .cflex {
 }
 
 @media all and (max-width: 992px) /* Écran de tablette */ {
+
+  #menu {
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: flex-end;
+    width: 200px;
+  }
+
+  .choix {
+    height: 49%;
+    width: inherit;
+  }
+
+  .choix:hover {
+    border: none;
+    border-right: 2px var(--main-color) solid;
+  }
+
+  #hebergements {
+    flex-direction: column;
+  }
+
+  #hebergements article{
+    width: 100%;
+  }
+
+  #hebergements article > div{
+    justify-content: space-around;
+  }
+
+  #hebergements aside{
+    background-color: white;
+    width: 100%;
+    padding: 20px 0px;
+  }
+
+  #hebergements aside span{
+    justify-content: flex-start;
+    column-gap: 20px;
+  }
+
+  #activites_liste {
+    flex-direction: row;
+    row-gap: 20px;
+    column-gap: 2%;
+  }
+
+  #activites_liste a{
+    height: 190px;
+    width: 46%;
+  }
+
+  #activites_liste > a:nth-child(2){
+    height: 190px;
+    width: 20%;
+  }
+  
+  #activites_liste > a:nth-child(3){
+    height: 190px;
+    width: 30%;
+  }
+  
+  #activites_liste > a:nth-child(5){
+    height: 190px;
+    width: 25%;
+  }
+  
+  #activites_liste > a:nth-child(6){
+    height: 190px;
+    width: 25%;
+  }
+
 }
 
 @media all and (max-width: 768px) /* Écran de téléphone */ {
+
+  main {
+    padding: 0px;
+  }
+
+  header.rflex{
+    flex-direction: column;
+    padding: 0px;
+  }
+
+  #menu {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .choix {
+    width: 50%;
+    height: fit-content;
+    font-size: 22px;
+    padding-bottom: 15px;
+  }
+
+  .choix:hover {
+    border: none;
+    border-bottom: 5px var(--main-color) solid;
+  }
+
+  #above {
+    padding : 20px;
+  }
+
+  #accroche {
+    row-gap: 20px;
+    margin: 20px 0px;
+  }
+
+  #accroche strong {
+    font-size: 23px;
+    line-height: 110%;
+  }
+
+  #search_text{
+    display: none;
+  }
+
+  #search_image{
+    display: contents;
+  }
+
+  #recherche button {
+    width:50px;
+    border-radius: 15px;
+  }
+
+  #info.rflex {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  #hebergements {
+    flex-direction: column-reverse;
+  }
+
+  #hebergements aside {
+    background-color: var(--background-color);
+    padding: 40px 25px;
+    border-radius: 0px;
+  }
+
+  #hebergements aside > span{
+    font-size: 22px;
+    justify-content: space-between;
+    font-weight: bolder;
+  }
+
+  #hebergements article{
+    background-color: white;
+    padding: 40px 25px;
+  }
+
+  #hebergements article div {
+    padding: 20px 0px;
+  }
+
+  #hebergements article span{
+    margin : 0px;
+  }
+
+  #hebergements article a {
+    width: 100%;
+  }
+
+  .vcard {
+    width: 100%;
+    height: 250px;
+  }
+
+  #activites{
+    padding: 0px 25px;
+  }
+
+  #activites > span {
+    padding : 0px;
+    margin: 0px;
+  }
+
+  #activites_liste {
+    padding: 30px 0px;
+    flex-direction: column;
+    row-gap: 20px;
+    height: fit-content;
+  }
+
+  #activites_liste > a {
+    width: 100%;
+    height: 250px;
+  }
+
+  #activites_liste > a:nth-child(2){
+    height: 250px;
+    width: 100%;
+  }
+  
+  #activites_liste > a:nth-child(3){
+    height: 250px;
+    width: 100%;
+  }
+  
+  #activites_liste > a:nth-child(5){
+    height: 250px;
+    width: 100%;
+  }
+  
+  #activites_liste > a:nth-child(6){
+    height: 250px;
+    width: 100%;
+  }
+
+  footer.rflex{
+    flex-direction: column;
+  }
+  footer cflex{
+    padding: 10px;
+  }
 }
