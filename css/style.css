@@ -449,6 +449,8 @@ footer .cflex {
     height: fit-content;
     font-size: 22px;
     padding-bottom: 15px;
+    border: none;
+    border-bottom: 5px var(--background-color) solid;
   }
 
   .choix:hover {
