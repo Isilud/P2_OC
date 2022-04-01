@@ -70,10 +70,11 @@ figure {
 }
 
 .choix {
+  border-top: 2px white solid;
   width: 49%;
 }
 .choix:hover {
-  border-top: 2px var(--main-color) solid;
+  border-color: var(--main-color);
   color: var(--main-color);
 }
 
@@ -365,11 +366,12 @@ footer .cflex {
   .choix {
     height: 49%;
     width: inherit;
+    border: none;
+    border-right: 2px white solid;
   }
 
   .choix:hover {
-    border: none;
-    border-right: 2px var(--main-color) solid;
+    border-color: var(--main-color);
   }
 
   #hebergements {
