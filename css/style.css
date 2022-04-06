@@ -409,6 +409,14 @@ footer .cflex {
     column-gap: 20px;
   }
 
+  #activites img {
+    object-position: 0px;
+  }
+
+  #activites_liste > a:nth-child(4) img {
+    object-position: 0px;
+  }
+
   #activites_liste {
     flex-direction: row;
     row-gap: 20px;
