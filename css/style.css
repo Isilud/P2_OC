@@ -368,23 +368,6 @@ footer .cflex {
 }
 
 @media all and (max-width: 992px) /* Écran de tablette */ {
-  #menu {
-    flex-direction: column;
-    justify-content: space-around;
-    align-content: flex-end;
-    width: 200px;
-  }
-
-  .choix {
-    height: 49%;
-    width: inherit;
-    border: none;
-    border-right: 2px white solid;
-  }
-
-  .choix:hover {
-    border-color: var(--main-color);
-  }
 
   #hebergements {
     flex-direction: column;
