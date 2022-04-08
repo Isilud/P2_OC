@@ -39,7 +39,7 @@ a:visited {
   color: black;
 }
 body {
-  margin-right: auto;
+  margin: auto;
   max-width: 1450px;
 }
 
@@ -197,7 +197,7 @@ figure {
 }
 
 #recherche {
-  width: 420px;
+  width: 400px;
   height: 50px;
   margin-bottom: 22px;
 }
@@ -218,6 +218,7 @@ figure {
   border-left: none;
   border-right: none;
   padding-left: 15px;
+  width: 200px;
 }
 
 #recherche input::placeholder {
@@ -229,6 +230,7 @@ figure {
   background-color: var(--main-color);
   width: 140px;
   border: none;
+  padding: 0px 30px;
 }
 
 #liste_filtre {
@@ -284,6 +286,11 @@ figure {
   width: 32%;
   padding: 30px;
   row-gap: 30px;
+}
+
+#hebergements aside > span {
+  font-size: 20px;
+  font-weight: bolder;
 }
 
 #hebergements aside span {
@@ -486,6 +493,11 @@ footer .cflex {
   #recherche button {
     width: 50px;
     border-radius: 15px;
+  }
+
+  #texte {
+    width: 100%;
+    text-align: left;
   }
 
   #info.rflex {
